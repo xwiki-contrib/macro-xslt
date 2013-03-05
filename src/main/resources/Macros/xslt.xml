@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xwikidoc>
+<web>Macros</web>
+<name>xslt</name>
+<language></language>
+<defaultLanguage></defaultLanguage>
+<translation>0</translation>
+<parent>Main.WebHome</parent>
+<creator>xwiki:XWiki.Admin</creator>
+<author>xwiki:XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+<creationDate>1288686657000</creationDate>
+<date>1288686696000</date>
+<contentUpdateDate>1288686696000</contentUpdateDate>
+<version>1.1</version>
+<title>XSLT Macro</title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment></comment>
+<minorEdit>false</minorEdit>
+<syntaxId>xwiki/2.0</syntaxId>
+<hidden>false</hidden><attachment>
+<filename>persons.xml</filename>
+<filesize>265</filesize>
+<author>xwiki:XWiki.Admin</author>
+<date>1288686657000</date>
+<version>1.1</version>
+<comment></comment><content>PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8cGVyc29ucz4KICAgIDxwZXJzb24gdXNlcm5hbWU9IkpT
+MSI+CiAgICAgICAgPG5hbWU+Sm9objwvbmFtZT4KICAgICAgICA8ZmFtaWx5X25hbWU+U21pdGg8
+L2ZhbWlseV9uYW1lPgogICAgPC9wZXJzb24+CiAgICA8cGVyc29uIHVzZXJuYW1lPSJORDEiPgog
+ICAgICAgIDxuYW1lPk5hbmN5PC9uYW1lPgogICAgICAgIDxmYW1pbHlfbmFtZT5EYXZvbGlvPC9m
+YW1pbHlfbmFtZT4KICAgIDwvcGVyc29uPgo8L3BlcnNvbnM+Cg==
+</content></attachment><attachment>
+<filename>persons.xsl</filename>
+<filesize>617</filesize>
+<author>xwiki:XWiki.Admin</author>
+<date>1288686657000</date>
+<version>1.1</version>
+<comment></comment><content>PHhzbDpzdHlsZXNoZWV0IHhtbG5zOnhzbD0iaHR0cDovL3d3dy53My5vcmcvMTk5OS9YU0wvVHJh
+bnNmb3JtIiB2ZXJzaW9uPSIxLjAiPgogICAgPHhzbDpvdXRwdXQgbWV0aG9kPSJ0ZXh0Ii8+CiAg
+ICA8eHNsOnRlbXBsYXRlIG1hdGNoPSIvIj4KICAgICAgICA8eHNsOnRleHQ+Cnw9RmFtaWx5IG5h
+bWV8PU5hbWUKPC94c2w6dGV4dD4KICAgICAgICA8eHNsOmFwcGx5LXRlbXBsYXRlcyBzZWxlY3Q9
+Ii8vcGVyc29uIj4KICAgICAgICAgICAgPHhzbDpzb3J0IHNlbGVjdD0iZmFtaWx5X25hbWUiIC8+
+CiAgICAgICAgPC94c2w6YXBwbHktdGVtcGxhdGVzPgogICAgICAgIDx4c2w6dGV4dD4KPC94c2w6
+dGV4dD4KICAgIDwveHNsOnRlbXBsYXRlPgogICAgPHhzbDp0ZW1wbGF0ZSBtYXRjaD0icGVyc29u
+Ij4KICAgICAgICA8eHNsOnRleHQ+fDwveHNsOnRleHQ+CiAgICAgICAgPHhzbDp2YWx1ZS1vZiBz
+ZWxlY3Q9ImZhbWlseV9uYW1lIi8+CiAgICAgICAgPHhzbDp0ZXh0Pnw8L3hzbDp0ZXh0PgogICAg
+ICAgIDx4c2w6dmFsdWUtb2Ygc2VsZWN0PSJuYW1lIi8+CiAgICAgICAgPHhzbDp0ZXh0Pgo8L3hz
+bDp0ZXh0PgogICAgPC94c2w6dGVtcGxhdGU+CjwveHNsOnN0eWxlc2hlZXQ+Cgo=
+</content></attachment>
+<object>
+<class>
+<name>XWiki.WikiMacroClass</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<code>
+<disabled>0</disabled>
+<editor>---</editor>
+<name>code</name>
+<number>6</number>
+<picker>0</picker>
+<prettyName>Macro code</prettyName>
+<rows>5</rows>
+<size>40</size>
+<unmodifiable>0</unmodifiable>
+<validationMessage></validationMessage>
+<validationRegExp></validationRegExp>
+<classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+</code>
+<contentDescription>
+<disabled>0</disabled>
+<editor>---</editor>
+<name>contentDescription</name>
+<number>5</number>
+<picker>0</picker>
+<prettyName>Content description (Not applicable for "No content" type)</prettyName>
+<rows>5</rows>
+<size>40</size>
+<unmodifiable>0</unmodifiable>
+<validationMessage></validationMessage>
+<validationRegExp></validationRegExp>
+<classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+</contentDescription>
+<contentType>
+<cache>0</cache>
+<disabled>0</disabled>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>contentType</name>
+<number>4</number>
+<picker>0</picker>
+<prettyName>Macro content type</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator></separator>
+<separators>|</separators>
+<size>1</size>
+<sort>none</sort>
+<unmodifiable>0</unmodifiable>
+<validationMessage></validationMessage>
+<validationRegExp></validationRegExp>
+<values>Mandatory|Optional|No content</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</contentType>
+<defaultCategory>
+<disabled>0</disabled>
+<name>defaultCategory</name>
+<number>8</number>
+<prettyName>Default category</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</defaultCategory>
+<description>
+<disabled>0</disabled>
+<editor>PureText</editor>
+<name>description</name>
+<number>2</number>
+<picker>0</picker>
+<prettyName>Macro description</prettyName>
+<rows>5</rows>
+<size>40</size>
+<unmodifiable>0</unmodifiable>
+<validationMessage></validationMessage>
+<validationRegExp></validationRegExp>
+<classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+</description>
+<id>
+<disabled>0</disabled>
+<name>id</name>
+<number>7</number>
+<prettyName>Macro id</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</id>
+<name>
+<disabled>0</disabled>
+<name>name</name>
+<number>1</number>
+<picker>0</picker>
+<prettyName>Macro name</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<validationMessage></validationMessage>
+<validationRegExp></validationRegExp>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</name>
+<supportsInlineMode>
+<defaultValue>1</defaultValue>
+<disabled>0</disabled>
+<displayFormType>select</displayFormType>
+<displayType></displayType>
+<name>supportsInlineMode</name>
+<number>3</number>
+<prettyName>Supports inline mode</prettyName>
+<unmodifiable>0</unmodifiable>
+<validationMessage></validationMessage>
+<validationRegExp></validationRegExp>
+<classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+</supportsInlineMode>
+<visibility>
+<cache>0</cache>
+<disabled>0</disabled>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>visibility</name>
+<number>9</number>
+<prettyName>Macro visibility</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator>|</separator>
+<separators>|</separators>
+<size>1</size>
+<unmodifiable>0</unmodifiable>
+<values>Current User|Current Wiki|Global</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</visibility>
+</class>
+<name>Macros.xslt</name>
+<number>0</number>
+<className>XWiki.WikiMacroClass</className>
+<guid>6c6523eb-2bf9-49f3-88cf-a625cfbdfe00</guid>
+<property>
+<code>{{velocity}}#set($ok = $context.context.put("mydoc", $doc)){{/velocity}}{{groovy}}
+import javax.xml.transform.TransformerFactory
+import javax.xml.transform.stream.StreamResult
+import javax.xml.transform.stream.StreamSource
+
+def xmldoc=xcontext.mydoc
+def xsldoc=xcontext.mydoc
+def xsl=xcontext.macro.params.xsl
+def xml=xcontext.macro.params.xml
+
+if (null == xsl &amp;&amp; null == xml) {
+  println "\n{{error}}**xslt** macro need at least one of **xsl** or **xml** parameter{{/error}}"
+} else if (null == xcontext.macro.content &amp;&amp; (null == xsl || null == xml)){
+  println "\n{{error}}**xslt** macro content is mandatory if only one of **xsl** or **xml** parameter is set{{/error}}"
+} else {
+  if (null == xml) {
+    xml=xcontext.macro.content
+  } else if (null == xsl) {
+    xsl=xcontext.macro.content
+  }
+
+//print "\n\n{{code}}"+xsl+"{{/code}}\n\n"
+//print "\n\n{{code}}"+xml+"{{/code}}\n\n"
+  def sst = new StreamSource()
+  if (null != xsl &amp;&amp; xsl.startsWith("attach:")) {
+    xsl=xsl.substring(7)
+    if (xsl.contains('@')) {
+      xsldoc=xwiki.getDocument(xsl.substring(0, xsl.indexOf('@')))
+      xsl=xsl.substring(xsl.indexOf('@')+1)
+    }
+    xsl=xsldoc.getAttachment(xsl).getContentAsString()
+  }
+  if (xsl.startsWith("http")) {
+//    xsl=xwiki.getURLContent(xsl)
+    sst.setSystemId(xsl)
+  } else {
+    sst.setReader(new StringReader(xsl))
+  }
+  
+  def ssx = new StreamSource()
+  if (null != xml &amp;&amp; xml.startsWith("attach:")) {
+    xml=xml.substring(7)
+    if (xml.contains('@')) {
+      xmldoc=xwiki.getDocument(xml.substring(0, xml.indexOf('@')))
+      xml=xml.substring(xml.indexOf('@')+1)
+    }
+    xml=xmldoc.getAttachment(xml).getContentAsString()
+  }
+  if (xml.startsWith("http")) {
+//    xml = xwiki.getURLContent(xml)
+    ssx.setSystemId(xml)
+  } else {
+    ssx.setReader(new StringReader(xml))
+  }
+
+//print "\n\n{{code}}"+xsl+"{{/code}}\n\n"
+//print "\n\n{{code}}"+xml+"{{/code}}\n\n"
+
+  def factory = TransformerFactory.newInstance()
+//  def transformer = factory.newTransformer(new StreamSource(new StringReader(xsl)))
+  def transformer = factory.newTransformer(sst)
+  def StringWriter sw = new StringWriter()
+//  transformer.transform(new StreamSource(new StringReader(xml)), new StreamResult(sw))
+  transformer.transform(ssx, new StreamResult(sw))
+  println sw
+}
+
+{{/groovy}}
+</code></property><property><contentDescription>XML document or else style sheet</contentDescription>
+</property>
+<property>
+<contentType>Optional</contentType>
+</property>
+<property>
+<defaultCategory></defaultCategory>
+</property>
+<property>
+<description>XSLT Macro help to transform XML document with XSLT style sheet.
+Macro is able to retrieve XML document or style sheet from attachment or URL
+XML document or else style sheet could be the content of the macro.</description>
+</property>
+<property>
+<id>xslt</id>
+</property>
+<property>
+<name>xslt</name>
+</property>
+<property>
+<supportsInlineMode>1</supportsInlineMode>
+</property>
+<property>
+<visibility>Global</visibility>
+</property>
+</object>
+<object>
+<class>
+<name>XWiki.WikiMacroParameterClass</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<defaultValue>
+<disabled>0</disabled>
+<name>defaultValue</name>
+<number>4</number>
+<prettyName>Parameter default value</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</defaultValue>
+<description>
+<disabled>0</disabled>
+<editor>---</editor>
+<name>description</name>
+<number>2</number>
+<picker>0</picker>
+<prettyName>Parameter description</prettyName>
+<rows>5</rows>
+<size>40</size>
+<unmodifiable>0</unmodifiable>
+<validationMessage></validationMessage>
+<validationRegExp></validationRegExp>
+<classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+</description>
+<mandatory>
+<defaultValue></defaultValue>
+<disabled>0</disabled>
+<displayFormType>select</displayFormType>
+<displayType></displayType>
+<name>mandatory</name>
+<number>3</number>
+<prettyName>Parameter mandatory</prettyName>
+<unmodifiable>0</unmodifiable>
+<validationMessage></validationMessage>
+<validationRegExp></validationRegExp>
+<classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+</mandatory>
+<name>
+<disabled>0</disabled>
+<name>name</name>
+<number>1</number>
+<picker>0</picker>
+<prettyName>Parameter name</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<validationMessage></validationMessage>
+<validationRegExp></validationRegExp>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</name>
+</class>
+<name>Macros.xslt</name>
+<number>0</number>
+<className>XWiki.WikiMacroParameterClass</className>
+<guid>ed0bb191-e478-49ac-afff-bb34b0b5dfdf</guid>
+<property>
+<defaultValue></defaultValue>
+</property>
+<property>
+<description>XSLT style sheet URL http: or attach:</description>
+</property>
+<property>
+<mandatory>0</mandatory>
+</property>
+<property>
+<name>xsl</name>
+</property>
+</object>
+<object>
+<class>
+<name>XWiki.WikiMacroParameterClass</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<defaultValue>
+<disabled>0</disabled>
+<name>defaultValue</name>
+<number>4</number>
+<prettyName>Parameter default value</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</defaultValue>
+<description>
+<disabled>0</disabled>
+<editor>---</editor>
+<name>description</name>
+<number>2</number>
+<picker>0</picker>
+<prettyName>Parameter description</prettyName>
+<rows>5</rows>
+<size>40</size>
+<unmodifiable>0</unmodifiable>
+<validationMessage></validationMessage>
+<validationRegExp></validationRegExp>
+<classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+</description>
+<mandatory>
+<defaultValue></defaultValue>
+<disabled>0</disabled>
+<displayFormType>select</displayFormType>
+<displayType></displayType>
+<name>mandatory</name>
+<number>3</number>
+<prettyName>Parameter mandatory</prettyName>
+<unmodifiable>0</unmodifiable>
+<validationMessage></validationMessage>
+<validationRegExp></validationRegExp>
+<classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+</mandatory>
+<name>
+<disabled>0</disabled>
+<name>name</name>
+<number>1</number>
+<picker>0</picker>
+<prettyName>Parameter name</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<validationMessage></validationMessage>
+<validationRegExp></validationRegExp>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</name>
+</class>
+<name>Macros.xslt</name>
+<number>1</number>
+<className>XWiki.WikiMacroParameterClass</className>
+<guid>993b2fcd-8aae-469d-a020-8f6f13c09b65</guid>
+<property>
+<defaultValue></defaultValue>
+</property>
+<property>
+<description>XML document URL http: or attach:</description>
+</property>
+<property>
+<mandatory>0</mandatory>
+</property>
+<property>
+<name>xml</name>
+</property>
+</object>
+<content>XSLT Macro helps to transform XML document with XSLT style sheet.
+Macro is able to retrieve XML document or style sheet from attachment or URL
+XML document or else style sheet could be the content of the macro.
+
+|=Parameter|=Description|=Possible values|=Default value
+|xsl|XSLT style sheet to apply to XML|(((http~://somewhere/style.xsl
+attach~:~[[space.]page@]style.xsl)))| none
+|xml|XML document to process|(((http~://somewhere/document.xml
+attach~:~[[space.]page@]document.xml)))| none
+
+== Samples ==
+===xml and xsl parameters===
+{{code}}{{xslt xsl="attach:persons.xsl" xml="attach:persons.xml"/}}{{/code}}
+
+{{xslt xsl="attach:persons.xsl" xml="attach:persons.xml"/}}
+
+===xsl parameter and content as xml document==
+{{code}}{{xslt xsl="attach:persons.xsl"}}
+&lt;persons&gt;
+    &lt;person username="JS1"&gt;
+        &lt;name&gt;John&lt;/name&gt;
+        &lt;family_name&gt;Smith&lt;/family_name&gt;
+    &lt;/person&gt;
+    &lt;person username="ND1"&gt;
+        &lt;name&gt;Nancy&lt;/name&gt;
+        &lt;family_name&gt;Davolio&lt;/family_name&gt;
+    &lt;/person&gt;
+&lt;/persons&gt;
+{{/xslt}}
+{{/code}}
+
+{{xslt xsl="attach:persons.xsl"}}
+&lt;persons&gt;
+    &lt;person username="JS1"&gt;
+        &lt;name&gt;John&lt;/name&gt;
+        &lt;family_name&gt;Smith&lt;/family_name&gt;
+    &lt;/person&gt;
+    &lt;person username="ND1"&gt;
+        &lt;name&gt;Nancy&lt;/name&gt;
+        &lt;family_name&gt;Davolio&lt;/family_name&gt;
+    &lt;/person&gt;
+&lt;/persons&gt;
+{{/xslt}}
+
+===xml parameter and content as xsl style sheet==
+{{code}}{{xslt xml="attach:persons.xml"}}
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+    &lt;xsl:output method="text"/&gt;
+    &lt;xsl:template match="/"&gt;
+        &lt;xsl:text&gt;
+|=Family name|=Name
+&lt;/xsl:text&gt;
+        &lt;xsl:apply-templates select="//person"&gt;
+            &lt;xsl:sort select="family_name" /&gt;
+        &lt;/xsl:apply-templates&gt;
+        &lt;xsl:text&gt;
+&lt;/xsl:text&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match="person"&gt;
+        &lt;xsl:text&gt;|&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="family_name"/&gt;
+        &lt;xsl:text&gt;|&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="name"/&gt;
+        &lt;xsl:text&gt;
+&lt;/xsl:text&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;{{/xslt}}{{/code}}
+
+{{xslt xml="attach:persons.xml"}}
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+    &lt;xsl:output method="text"/&gt;
+    &lt;xsl:template match="/"&gt;
+        &lt;xsl:text&gt;
+|=Family name|=Name
+&lt;/xsl:text&gt;
+        &lt;xsl:apply-templates select="//person"&gt;
+            &lt;xsl:sort select="family_name" /&gt;
+        &lt;/xsl:apply-templates&gt;
+        &lt;xsl:text&gt;
+&lt;/xsl:text&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match="person"&gt;
+        &lt;xsl:text&gt;|&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="family_name"/&gt;
+        &lt;xsl:text&gt;|&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="name"/&gt;
+        &lt;xsl:text&gt;
+&lt;/xsl:text&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;{{/xslt}}
+
+=== missing parameters ===
+{{code}}{{xslt /}}{{/code}}
+
+{{xslt /}}
+
+=== missing content===
+{{code}}{{xslt xsl="attach:persons.xsl"/}}{{/code}}
+
+{{xslt xsl="attach:persons.xsl"/}}
+</content></xwikidoc>

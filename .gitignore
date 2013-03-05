@@ -1,0 +1,33 @@
+# Build
+target
+target-eclipse
+
+# IDEA
+*.iml
+*.ipr
+*.iws
+.idea
+atlassian-ide-plugin.xml
+
+# Eclipse
+.classpath
+.project
+.settings
+.checkstyle
+.fbprefs
+bin
+
+# NetBeans
+nbproject
+
+#Maven
+target
+
+# Other
+*.log.*
+*.log
+.sonar-ide.properties
+.clover
+*~
+
+.DS_Store
