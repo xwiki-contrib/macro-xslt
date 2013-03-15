@@ -31,7 +31,7 @@
   </parent>
   <groupId>org.xwiki.contrib</groupId>
   <artifactId>xwiki-xlst-macro</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <packaging>xar</packaging>
   <name>Contrib - Macros - Xslt Macro</name>
   <description>Xslt Macro for XWiki</description>

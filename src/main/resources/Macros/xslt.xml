@@ -11,8 +11,8 @@
 <customClass></customClass>
 <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
 <creationDate>1288686657000</creationDate>
-<date>1288686696000</date>
-<contentUpdateDate>1288686696000</contentUpdateDate>
+<date>1362346379000</date>
+<contentUpdateDate>1362345495000</contentUpdateDate>
 <version>1.1</version>
 <title>XSLT Macro</title>
 <template></template>
@@ -62,30 +62,22 @@ bDp0ZXh0PgogICAgPC94c2w6dGVtcGxhdGU+CjwveHNsOnN0eWxlc2hlZXQ+Cgo=
 <validationScript></validationScript>
 <code>
 <disabled>0</disabled>
-<editor>---</editor>
 <name>code</name>
-<number>6</number>
-<picker>0</picker>
+<number>9</number>
 <prettyName>Macro code</prettyName>
-<rows>5</rows>
+<rows>20</rows>
 <size>40</size>
 <unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
 <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
 </code>
 <contentDescription>
 <disabled>0</disabled>
-<editor>---</editor>
 <name>contentDescription</name>
-<number>5</number>
-<picker>0</picker>
+<number>8</number>
 <prettyName>Content description (Not applicable for "No content" type)</prettyName>
 <rows>5</rows>
 <size>40</size>
 <unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
 <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
 </contentDescription>
 <contentType>
@@ -94,24 +86,20 @@ bDp0ZXh0PgogICAgPC94c2w6dGVtcGxhdGU+CjwveHNsOnN0eWxlc2hlZXQ+Cgo=
 <displayType>select</displayType>
 <multiSelect>0</multiSelect>
 <name>contentType</name>
-<number>4</number>
-<picker>0</picker>
+<number>7</number>
 <prettyName>Macro content type</prettyName>
 <relationalStorage>0</relationalStorage>
-<separator></separator>
+<separator>|</separator>
 <separators>|</separators>
 <size>1</size>
-<sort>none</sort>
 <unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
-<values>Mandatory|Optional|No content</values>
+<values>Optional|Mandatory|No content</values>
 <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
 </contentType>
 <defaultCategory>
 <disabled>0</disabled>
 <name>defaultCategory</name>
-<number>8</number>
+<number>4</number>
 <prettyName>Default category</prettyName>
 <size>30</size>
 <unmodifiable>0</unmodifiable>
@@ -119,22 +107,18 @@ bDp0ZXh0PgogICAgPC94c2w6dGVtcGxhdGU+CjwveHNsOnN0eWxlc2hlZXQ+Cgo=
 </defaultCategory>
 <description>
 <disabled>0</disabled>
-<editor>PureText</editor>
 <name>description</name>
-<number>2</number>
-<picker>0</picker>
+<number>3</number>
 <prettyName>Macro description</prettyName>
 <rows>5</rows>
 <size>40</size>
 <unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
 <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
 </description>
 <id>
 <disabled>0</disabled>
 <name>id</name>
-<number>7</number>
+<number>1</number>
 <prettyName>Macro id</prettyName>
 <size>30</size>
 <unmodifiable>0</unmodifiable>
@@ -143,26 +127,20 @@ bDp0ZXh0PgogICAgPC94c2w6dGVtcGxhdGU+CjwveHNsOnN0eWxlc2hlZXQ+Cgo=
 <name>
 <disabled>0</disabled>
 <name>name</name>
-<number>1</number>
-<picker>0</picker>
+<number>2</number>
 <prettyName>Macro name</prettyName>
 <size>30</size>
 <unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
 <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
 </name>
 <supportsInlineMode>
-<defaultValue>1</defaultValue>
 <disabled>0</disabled>
 <displayFormType>select</displayFormType>
-<displayType></displayType>
+<displayType>yesno</displayType>
 <name>supportsInlineMode</name>
-<number>3</number>
+<number>5</number>
 <prettyName>Supports inline mode</prettyName>
 <unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
 <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
 </supportsInlineMode>
 <visibility>
@@ -171,7 +149,7 @@ bDp0ZXh0PgogICAgPC94c2w6dGVtcGxhdGU+CjwveHNsOnN0eWxlc2hlZXQ+Cgo=
 <displayType>select</displayType>
 <multiSelect>0</multiSelect>
 <name>visibility</name>
-<number>9</number>
+<number>6</number>
 <prettyName>Macro visibility</prettyName>
 <relationalStorage>0</relationalStorage>
 <separator>|</separator>
@@ -196,6 +174,7 @@ def xmldoc=xcontext.mydoc
 def xsldoc=xcontext.mydoc
 def xsl=xcontext.macro.params.xsl
 def xml=xcontext.macro.params.xml
+def params=xcontext.macro.params.params
 
 if (null == xsl &amp;&amp; null == xml) {
   println "\n{{error}}**xslt** macro need at least one of **xsl** or **xml** parameter{{/error}}"
@@ -248,6 +227,15 @@ if (null == xsl &amp;&amp; null == xml) {
   def factory = TransformerFactory.newInstance()
 //  def transformer = factory.newTransformer(new StreamSource(new StringReader(xsl)))
   def transformer = factory.newTransformer(sst)
+  if (null != params) {
+//println params
+    params.split("(?!\\\\),").each {
+//print "it "
+       def param=it.split("(?!\\\\)=")
+       transformer.setParameter(param[0], param[1])
+//println param[0]+"="+param[1]
+    }
+  }
   def StringWriter sw = new StringWriter()
 //  transformer.transform(new StreamSource(new StringReader(xml)), new StreamResult(sw))
   transformer.transform(ssx, new StreamResult(sw))
@@ -255,7 +243,7 @@ if (null == xsl &amp;&amp; null == xml) {
 }
 
 {{/groovy}}
-</code></property><property><contentDescription>XML document or else style sheet</contentDescription>
+</code></property><property><contentDescription>XML document or else XSLT style-sheet</contentDescription>
 </property>
 <property>
 <contentType>Optional</contentType>
@@ -264,9 +252,10 @@ if (null == xsl &amp;&amp; null == xml) {
 <defaultCategory></defaultCategory>
 </property>
 <property>
-<description>XSLT Macro help to transform XML document with XSLT style sheet.
+<description>XSLT Macro help to transform XML document with XSLT style-sheet.
 Macro is able to retrieve XML document or style sheet from attachment or URL
-XML document or else style sheet could be the content of the macro.</description>
+XML document or else style sheet could be the content of the macro.
+Parameters could be pass to the XSLT style-sheet.</description>
 </property>
 <property>
 <id>xslt</id>
@@ -302,41 +291,31 @@ XML document or else style sheet could be the content of the macro.</description
 </defaultValue>
 <description>
 <disabled>0</disabled>
-<editor>---</editor>
 <name>description</name>
 <number>2</number>
-<picker>0</picker>
 <prettyName>Parameter description</prettyName>
 <rows>5</rows>
 <size>40</size>
 <unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
 <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
 </description>
 <mandatory>
-<defaultValue></defaultValue>
 <disabled>0</disabled>
 <displayFormType>select</displayFormType>
-<displayType></displayType>
+<displayType>yesno</displayType>
 <name>mandatory</name>
 <number>3</number>
 <prettyName>Parameter mandatory</prettyName>
 <unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
 <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
 </mandatory>
 <name>
 <disabled>0</disabled>
 <name>name</name>
 <number>1</number>
-<picker>0</picker>
 <prettyName>Parameter name</prettyName>
 <size>30</size>
 <unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
 <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
 </name>
 </class>
@@ -378,41 +357,31 @@ XML document or else style sheet could be the content of the macro.</description
 </defaultValue>
 <description>
 <disabled>0</disabled>
-<editor>---</editor>
 <name>description</name>
 <number>2</number>
-<picker>0</picker>
 <prettyName>Parameter description</prettyName>
 <rows>5</rows>
 <size>40</size>
 <unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
 <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
 </description>
 <mandatory>
-<defaultValue></defaultValue>
 <disabled>0</disabled>
 <displayFormType>select</displayFormType>
-<displayType></displayType>
+<displayType>yesno</displayType>
 <name>mandatory</name>
 <number>3</number>
 <prettyName>Parameter mandatory</prettyName>
 <unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
 <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
 </mandatory>
 <name>
 <disabled>0</disabled>
 <name>name</name>
 <number>1</number>
-<picker>0</picker>
 <prettyName>Parameter name</prettyName>
 <size>30</size>
 <unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
 <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
 </name>
 </class>
@@ -433,6 +402,73 @@ XML document or else style sheet could be the content of the macro.</description
 <name>xml</name>
 </property>
 </object>
+<object>
+<class>
+<name>XWiki.WikiMacroParameterClass</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<defaultValue>
+<disabled>0</disabled>
+<name>defaultValue</name>
+<number>4</number>
+<prettyName>Parameter default value</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</defaultValue>
+<description>
+<disabled>0</disabled>
+<name>description</name>
+<number>2</number>
+<prettyName>Parameter description</prettyName>
+<rows>5</rows>
+<size>40</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+</description>
+<mandatory>
+<disabled>0</disabled>
+<displayFormType>select</displayFormType>
+<displayType>yesno</displayType>
+<name>mandatory</name>
+<number>3</number>
+<prettyName>Parameter mandatory</prettyName>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+</mandatory>
+<name>
+<disabled>0</disabled>
+<name>name</name>
+<number>1</number>
+<prettyName>Parameter name</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</name>
+</class>
+<name>Macros.xslt</name>
+<number>2</number>
+<className>XWiki.WikiMacroParameterClass</className>
+<guid>d71595fa-d39a-4522-aba2-601c217acece</guid>
+<property>
+<defaultValue></defaultValue>
+</property>
+<property>
+<description>Parameters for XSLT style-sheet: xsm:param elements.
+It is comma separated name=value pair: firstname=John,age=40</description>
+</property>
+<property>
+<mandatory>0</mandatory>
+</property>
+<property>
+<name>params</name>
+</property>
+</object>
 <content>XSLT Macro helps to transform XML document with XSLT style sheet.
 Macro is able to retrieve XML document or style sheet from attachment or URL
 XML document or else style sheet could be the content of the macro.
@@ -442,12 +478,13 @@ XML document or else style sheet could be the content of the macro.
 attach~:~[[space.]page@]style.xsl)))| none
 |xml|XML document to process|(((http~://somewhere/document.xml
 attach~:~[[space.]page@]document.xml)))| none
+|params|Comma separated list of parameters name, value pair|(((name1=value1[,name2=value2[,...~]])))| none
 
 == Samples ==
 ===xml and xsl parameters===
 {{code}}{{xslt xsl="attach:persons.xsl" xml="attach:persons.xml"/}}{{/code}}
 
-{{xslt xsl="attach:persons.xsl" xml="attach:persons.xml"/}}
+{{xslt xsl="attach:persons.xsl" xml="http://localhost:8080/xwiki/bin/download/Macros/xslt/persons.xml"/}}
 
 ===xsl parameter and content as xml document==
 {{code}}{{xslt xsl="attach:persons.xsl"}}
@@ -509,6 +546,55 @@ attach~:~[[space.]page@]document.xml)))| none
 |=Family name|=Name
 &lt;/xsl:text&gt;
         &lt;xsl:apply-templates select="//person"&gt;
+            &lt;xsl:sort select="family_name" /&gt;
+        &lt;/xsl:apply-templates&gt;
+        &lt;xsl:text&gt;
+&lt;/xsl:text&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match="person"&gt;
+        &lt;xsl:text&gt;|&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="family_name"/&gt;
+        &lt;xsl:text&gt;|&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="name"/&gt;
+        &lt;xsl:text&gt;
+&lt;/xsl:text&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;{{/xslt}}
+
+===xml parameter, content as xsl style sheet and params parameter==
+{{code}}{{xslt xml="attach:persons.xml" params="user=JS1"}}
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+    &lt;xsl:output method="text"/&gt;
+    &lt;xsl:param name="user"/&gt;
+    &lt;xsl:template match="/"&gt;
+        &lt;xsl:text&gt;
+|=Family name|=Name
+&lt;/xsl:text&gt;
+        &lt;xsl:apply-templates select="//person[@username=$user]"&gt;
+            &lt;xsl:sort select="family_name" /&gt;
+        &lt;/xsl:apply-templates&gt;
+        &lt;xsl:text&gt;
+&lt;/xsl:text&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match="person"&gt;
+        &lt;xsl:text&gt;|&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="family_name"/&gt;
+        &lt;xsl:text&gt;|&lt;/xsl:text&gt;
+        &lt;xsl:value-of select="name"/&gt;
+        &lt;xsl:text&gt;
+&lt;/xsl:text&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;{{/xslt}}{{/code}}
+
+{{xslt xml="attach:persons.xml" params="user=JS1"}}
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+    &lt;xsl:output method="text"/&gt;
+    &lt;xsl:param name="user"/&gt;
+    &lt;xsl:template match="/"&gt;
+        &lt;xsl:text&gt;
+|=Family name|=Name
+&lt;/xsl:text&gt;
+        &lt;xsl:apply-templates select="//person[@username=$user]"&gt;
             &lt;xsl:sort select="family_name" /&gt;
         &lt;/xsl:apply-templates&gt;
         &lt;xsl:text&gt;
